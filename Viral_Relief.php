@@ -142,7 +142,7 @@ class Viral_Relief {
 			$url = str_replace('https://', 'http://', $url ); 
 
 		  //save url and file key to post_meta
-			$this->set_s3_post_meta($url, 'test');
+			$this->set_s3_post_meta($url, $post->post_name);
 
 		} catch (S3Exception $e) {
 			echo "There was an error uploading the file.\n";
